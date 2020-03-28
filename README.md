@@ -20,3 +20,11 @@ configuration will be printed on screen (use -ti option).
 | MYPASS     | W3LxUqfeqm | mysql user password                        |
 | HTTPPORT   | 80         | httpd port                                 |
 | INITIALIZE | yes        | do initialization on running the container |
+
+## External files/packages
+
+Fetch phpmyadmin:
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-english.tar.xz
+
+and synchronize the name inside the Dockerfile
+
