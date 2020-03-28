@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then 
+
+docker run --network host -d --rm --name web01 \
+           --hostname web01 -e HTTPPORT=8080 rosandi/datasrv
+
+
+else
+
+# interactive: type anything
+
+docker run -ti --rm --name web01 -p 80:80 \
+           --hostname web01 -e MYUSER=datamaster \
+           -e MYPASS=$(makepasswd)  \
+           rosandi/datasrv
+
+fi
